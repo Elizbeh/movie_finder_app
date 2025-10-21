@@ -68,7 +68,8 @@ Search for your favorite movies, view detailed information, and add them to your
 * * * * *
 
 ## 🗂 Project Structure
-public/
+
+```public/
 ├── index.html # Search page
 ├── watchlist.html # Watchlist page
 ├── index.js # Handles search, live search, adding to watchlist
@@ -79,7 +80,7 @@ server.cjs # Node.js + Express backend
 .env # Stores OMDb API key
 package.json # Node.js dependencies and scripts
 README.md # Project documentation
-
+```
 
 ⚡ Backend Endpoints
 -------------------
