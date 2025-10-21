@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="site-title">Movie Finder</h1>
+            <ul class="nav-links">
+                <li><a href="watchlist.html">My Watchlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <img class="search-icon" src="./images/Search.png" alt="Search Icon">
+                    <input 
+                        id="search-input" 
+                        type="text" 
+                        placeholder="Enter movie title" 
+                        aria-label="Search for movies"
+                    >
+                </div>
+                <button id="search-btn" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Movie Results Section -->
+        <section id="movie-container" class="movie-results">
+            <div class="start">
+                <img src="./images/Icon.png" alt="Start Exploring">
+                <p>Start Exploring</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
