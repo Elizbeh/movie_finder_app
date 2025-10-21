@@ -3,7 +3,7 @@ const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 const movieContainer = document.getElementById("movie-container");
 
-const API_BASE = "............";
+const API_BASE = "https://movie-finder-app-6dm1.onrender.com";
 
 // Debounce utility
 function debounce(func, delay) {
