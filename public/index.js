@@ -3,6 +3,8 @@ const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 const movieContainer = document.getElementById("movie-container");
 
+const API_BASE = "............";
+
 // Debounce utility
 function debounce(func, delay) {
     let timeout;
@@ -34,9 +36,9 @@ searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") handleSearch();
 });
 
-// Fetch movies list from server
+// Fetch movies list from backend
 async function fetchMovies(query) {
-    const url = `/api/movies?s=${encodeURIComponent(query)}`;
+    const url = `${API_BASE}/api/movies?s=${encodeURIComponent(query)}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -55,7 +57,7 @@ async function fetchMovies(query) {
 function displayMovies(movies) {
     movieContainer.innerHTML = "";
     movies.forEach(async (movie) => {
-        const detailsUrl = `/api/movie?id=${encodeURIComponent(movie.imdbID)}`;
+        const detailsUrl = `${API_BASE}/api/movie?id=${encodeURIComponent(movie.imdbID)}`;
         try {
             const response = await fetch(detailsUrl);
             const data = await response.json();
@@ -90,15 +92,15 @@ function displayMovies(movies) {
                             </div>
                             <div class="sub">
                                 <div class="detail">
-                                    <p>${data.Runtime}</p>
-                                    <p>${data.Genre}</p>
+                                    <p>${data.Runtime || "N/A"}</p>
+                                    <p>${data.Genre || "N/A"}</p>
                                 </div>
                                 <div class="add">
                                     <img src="./images/add.png" alt="Add to Watchlist"/>
                                     <p>Watchlist</p>
                                 </div>
                             </div>
-                            <p class="plot">${data.Plot}</p>
+                            <p class="plot">${data.Plot || "No description available."}</p>
                         </div>
                     </div>
                     <div class="divider"></div>
