@@ -1,14 +1,14 @@
 require('dotenv').config();
 const express = require('express');
-const fetch = require('node-fetch'); // v2 works with CommonJS
+const fetch = require('node-fetch');
 const path = require('path');
 
 const app = express();
 
-// Serve static files if needed (optional)
+// Serve static file
  app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware for CORS (so frontend on Netlify can call backend)
+// Middleware for CORS
 const cors = require('cors');
 app.use(cors());
 
