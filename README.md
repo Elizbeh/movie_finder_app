@@ -69,17 +69,17 @@ Search for your favorite movies, view detailed information, and add them to your
 
 🗂 Project Structure
 --------------------
-public/
-├── index.html       # Search page
-├── watchlist.html   # Watchlist page
-├── index.js         # Handles search, live search, adding to watchlist
-├── watchlist.js     # Loads, displays, and removes movies from watchlist
-├── index.css        # Shared styles and responsive grid
-└── images/          # Icons, backgrounds, placeholder assets
-server.cjs           # Node.js + Express backend
-.env                 # Stores OMDb API key
-README.md            # Project documentation
 
+`├── public/
+│   ├── index.html       # Search page
+│   ├── watchlist.html   # Watchlist page
+│   ├── index.js         # Handles search, live search, adding to watchlist
+│   ├── watchlist.js     # Loads, displays, and removes movies from watchlist
+│   ├── index.css        # Shared styles and responsive grid
+│   └── images/          # Icons, background, placeholder assets
+├── server.cjs           # Node.js + Express backend
+├── .env                 # Stores OMDb API key
+└── README.md            # Project documentation`
 
 * * * * *
 
