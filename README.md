@@ -1,5 +1,5 @@
 🎬 Movie Finder App
-=================
+===================
 
 A responsive movie search and watchlist web app built using a **Node.js backend** that proxies requests to the [OMDb API](https://www.omdbapi.com/).
 
@@ -10,7 +10,7 @@ Search for your favorite movies, view detailed information, and add them to your
 🌐 Live Demo
 ------------
 
-👉 **[View the deployed site here](https://your-deployment-url.com)**
+👉 **[View the deployed site here](https://movie-finder-app-6dm1.onrender.com/index.html)**
 
 * * * * *
 
@@ -25,7 +25,7 @@ Search for your favorite movies, view detailed information, and add them to your
 
 -   ❌ **Remove from Watchlist** --- Delete movies directly from your watchlist.
 
--   🗂️ **Persistent Watchlist** --- Data is saved locally and survives browser refresh or tab closing.
+-   🗂️ **Persistent Watchlist** --- Data survives browser refresh or tab closing.
 
 -   📱 **Responsive Layout** --- 2-column grid layout on large screens and single column on mobile.
 
@@ -36,7 +36,7 @@ Search for your favorite movies, view detailed information, and add them to your
 
 -   **HTML5**
 
--   **CSS3 (Flexbox + Grid, Responsive)**
+-   **CSS3** (Flexbox + Grid, Responsive)
 
 -   **Vanilla JavaScript (ES6+)**
 
@@ -98,17 +98,29 @@ Search for your favorite movies, view detailed information, and add them to your
 🚀 Deployment
 -------------
 
-You can deploy this app using **Heroku**, **Vercel**, or **Render** (for backend + static frontend).
+You can deploy this app using **Render** (backend + static frontend), **Heroku**, or **Vercel**.
 
-### Example Deployment Steps (Vercel)
+### Render Deployment Steps
 
-1.  Push code to GitHub.
+1.  Push your code to GitHub.
 
-2.  Create a new project in Vercel linked to your repository.
+2.  Log in to [Render](https://render.com/) and create a new **Web Service**.
 
-3.  Add the `.env` variable `OMDB_API_KEY` in Vercel dashboard.
+3.  Connect your GitHub repository.
 
-4.  Deploy, and your frontend will call the backend endpoints securely.
+4.  Set **Environment Variable**: `OMDB_API_KEY` in Render dashboard.
+
+5.  Set **Start Command**:
+
+    `node server.cjs`
+
+6.  Render will automatically detect your Node.js app, install dependencies, and deploy.
+
+7.  Your frontend will be accessible at:
+
+    `https://movie-finder-app-6dm1.onrender.com/index.html`
+
+> ✅ Frontend and backend are served together; API calls work without exposing the key.
 
 * * * * *
 
